@@ -1,26 +1,20 @@
-# CartonIQ Website
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-A responsive, static company website for CartonIQ. Built with plain HTML, CSS, and JavaScript so it can be hosted on Cloudflare Pages without a build step.
+# Run and deploy your AI Studio app
 
-## Included
-- Hybrid dark hero + light product/service sections
-- Responsive mobile navigation
-- Product search and category filters
-- Product detail modals
-- Inquiry form that prepares an email to `cartoniq.business@gmail.com`
-- Privacy note and terms modal
-- Roadmap for future customer accounts and admin tools
-- Basic SEO metadata and reduced-motion support
+This contains everything you need to run your app locally.
 
-## Deploy to Cloudflare Pages (Git integration)
-1. Upload `index.html` and this `README.md` to the root of the `cartoniq-website` GitHub repository.
-2. In Cloudflare Dashboard, open **Workers & Pages** → **Create application** → **Pages** → **Connect to Git**.
-3. Authorize GitHub and select `cartoniq-website`.
-4. For a plain static site, leave the build command blank and set the build output directory to `/` if Cloudflare requires an output directory. If the interface rejects `/`, use the direct-upload workflow or a supported output directory; do not add a framework preset.
-5. Deploy. Cloudflare will provide a `*.pages.dev` URL.
+View your app in AI Studio: https://ai.studio/apps/28c18569-5c61-4955-933e-77890de17f2d
 
-## Important scope note
-This first release is a static front end. The inquiry form opens the visitor's email app; it does not send or store form data by itself. Customer accounts, database, payments, and an admin dashboard are not enabled. Add those later with a secure backend/auth provider, server-side authorization, and an updated privacy policy. Never put private API keys in browser JavaScript.
+## Run Locally
 
-## Editing products
-In `index.html`, edit the product cards inside `#appGrid` and the `products` object in the JavaScript section together. Update availability labels to reflect the real status of each product.
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
