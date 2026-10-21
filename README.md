@@ -1,20 +1,65 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+CARTONIQ — Mohd Arsh
 
-# Run and deploy your AI Studio app
+Building Ideas Into Apps.
 
-This contains everything you need to run your app locally.
+Welcome to the official repository for the CartonIQ developer website, showcasing projects, Android development, developer tools, and technical experiments.
 
-View your app in AI Studio: https://ai.studio/apps/28c18569-5c61-4955-933e-77890de17f2d
+🌐 Live Website: https://cartoniq.runs-at.dev
 
-## Run Locally
+About
 
-**Prerequisites:**  Node.js
+CartonIQ is the personal developer portfolio of Mohd Arsh, focused on Android application development, web technologies, Termux, Linux, and turning creative ideas into practical software.
 
+Features
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- Modern, responsive developer portfolio
+- Interactive animations and visual effects
+- Project archive and developer toolkit
+- Technical experiments and interactive playground
+- Contact and collaboration section
+
+Technology Stack
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Lucide React
+- Motion
+
+Run Locally
+
+Prerequisite: Node.js and npm
+
+1. Clone the repository:
+   
+   git clone https://github.com/CartonIQ/cartoniq-website.git
+cd cartoniq-website
+
+2. Install dependencies:
+   
+   npm install
+
+3. Start the development server:
+   
+   npm run dev
+
+4. Create a production build:
+   
+   npm run build
+
+The production files are generated in the "dist/" directory.
+
+Deployment
+
+The website is deployed using Cloudflare Pages and connected to the "main" branch of this GitHub repository.
+
+Copyright
+
+Copyright © 2024 Velora Explains (CartonIQ). All rights reserved.
+
+Unauthorized copying, modification, redistribution, republishing, or commercial use is prohibited without permission.
+
+---
+
+Made with ❤️ for the developer community.
