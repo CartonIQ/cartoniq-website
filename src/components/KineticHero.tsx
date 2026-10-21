@@ -57,7 +57,7 @@ export const KineticHero: React.FC<KineticHeroProps> = ({ reducedMotion, onExplo
         {/* Giant CARTONIQ Title with 2D perspective / shift */}
         <div className="relative select-none">
           <h1 
-            className="text-[15vw] sm:text-[14vw] md:text-[13vw] font-black tracking-tighter leading-[0.88] font-display text-white transition-transform duration-200 ease-out flex flex-wrap"
+            className="text-[clamp(2rem,11vw,10rem)] whitespace-nowrap font-black tracking-tighter leading-[0.88] font-display text-white transition-transform duration-200 ease-out flex flex-wrap"
             style={{
               transform: reducedMotion ? 'none' : `translate3d(${mousePos.x * 0.4}px, ${mousePos.y * 0.4}px, 0)`
             }}
@@ -68,7 +68,7 @@ export const KineticHero: React.FC<KineticHeroProps> = ({ reducedMotion, onExplo
 
           {/* Ghost outline layered underneath */}
           <div 
-            className="absolute -top-1 -left-1 text-[15vw] sm:text-[14vw] md:text-[13vw] font-black tracking-tighter leading-[0.88] font-display text-transparent select-none pointer-events-none hidden md:block opacity-20"
+            className="absolute -top-1 -left-1 text-[clamp(2rem,11vw,10rem)] whitespace-nowrap font-black tracking-tighter leading-[0.88] font-display text-transparent select-none pointer-events-none hidden md:block opacity-20"
             style={{
               WebkitTextStroke: '1px #ff0033',
               transform: reducedMotion ? 'none' : `translate3d(${mousePos.x * -0.5}px, ${mousePos.y * -0.5}px, 0)`

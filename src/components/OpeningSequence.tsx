@@ -84,8 +84,8 @@ export const OpeningSequence: React.FC<OpeningSequenceProps> = ({ onComplete, re
         </div>
 
         {/* Giant Letters */}
-        <div className="w-full flex justify-center items-center overflow-hidden">
-          <h1 className="text-[14vw] sm:text-[15vw] md:text-[16vw] font-black tracking-tighter leading-none flex items-center justify-center font-display select-none">
+        <div className="w-full max-w-full px-3 box-border flex justify-center items-center overflow-visible">
+          <h1 className="text-[clamp(1rem,6.5vw,5.5rem)] whitespace-nowrap font-black tracking-tighter leading-none flex items-center justify-center font-display select-none">
             {letters.map((char, index) => {
               const isRevealed = step >= 2;
               return (
