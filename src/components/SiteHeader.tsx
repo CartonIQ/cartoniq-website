@@ -41,6 +41,7 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({ reducedMotion, onToggleM
   }, []);
 
   const navLinks = [
+    { label: '// PORTFOLIO', href: '/portfolio' },
     { label: '// ARCHIVE', href: '#projects' },
     { label: '// TERMINAL', href: '#terminal' },
     { label: '// TOOLKIT', href: '#toolkit' },

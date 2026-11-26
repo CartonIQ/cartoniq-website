@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080a12">
+<meta name="description" content="PDF Atelier Privacy Policy — a clear guide to how your documents, data and choices are handled.">
+<title>Privacy, with intention — PDF Atelier</title>
+<style>
+:root{
+  --night:#080a12;--night2:#101321;--ink:#171923;--muted:#a8adbd;
+  --paper:#f0eee8;--paper2:#e6e2d9;--gold:#d7bd83;--gold2:#f3dfae;
+  --line:rgba(255,255,255,.13);--darkline:rgba(23,25,35,.13);
+  --serif: "Iowan Old Style","Palatino Linotype","Book Antiqua",Georgia,serif;
+  --sans: Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;background:var(--night);color:#f5f1e8;font-family:var(--sans);font-size:15px;line-height:1.7}
+a{color:inherit}
+::selection{background:var(--gold);color:var(--night)}
+.progress{position:fixed;z-index:20;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,#9b8151,var(--gold2));box-shadow:0 0 14px #d7bd83}
+.nav{position:fixed;z-index:15;top:0;left:0;right:0;padding:20px clamp(20px,5vw,76px);display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,rgba(8,10,18,.88),rgba(8,10,18,.18));backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;letter-spacing:.16em;text-transform:uppercase;font-size:10px;font-weight:700}
+.brand-mark{width:29px;height:29px;border:1px solid rgba(215,189,131,.7);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-family:var(--serif);font-size:16px}
+.nav-right{display:flex;gap:24px;align-items:center;color:#c1c3cb;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.nav-right a{text-decoration:none;opacity:.8}.nav-right a:hover{color:var(--gold2);opacity:1}
+.hero{position:relative;min-height:790px;height:min(100svh,980px);overflow:hidden;display:grid;place-items:center;text-align:center;padding:130px 22px 80px;background:radial-gradient(ellipse at 50% 53%,#252438 0%,#111522 35%,#080a12 72%)}
+.stars,.stars:before,.stars:after{position:absolute;inset:0;content:"";pointer-events:none;background-image:radial-gradient(1px 1px at 14% 22%,#fff 90%,transparent),radial-gradient(1px 1px at 76% 18%,#e9d9b6 90%,transparent),radial-gradient(1px 1px at 83% 65%,#fff 90%,transparent),radial-gradient(1px 1px at 24% 73%,#d8c7a2 90%,transparent),radial-gradient(1px 1px at 61% 83%,#fff 90%,transparent),radial-gradient(1px 1px at 44% 14%,#fff 90%,transparent);background-size:410px 360px;opacity:.48;animation:drift 45s linear infinite}
+.stars:before{transform:translate(70px,35px) scale(1.4);opacity:.35}.stars:after{transform:translate(-60px,-25px) scale(.8);opacity:.5}
+@keyframes drift{to{transform:translate3d(25px,-30px,0)}}
+.orbit{position:absolute;width:min(70vw,760px);aspect-ratio:1;border:1px solid rgba(215,189,131,.13);border-radius:50%;box-shadow:0 0 100px rgba(181,151,96,.05),inset 0 0 100px rgba(181,151,96,.04);animation:rotate 90s linear infinite}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(215,189,131,.12);border-radius:50%;inset:10% -8%;transform:rotate(58deg)}
+.orbit:after{inset:19% -16%;transform:rotate(-51deg)}
+@keyframes rotate{to{transform:rotate(360deg)}}
+.portal{position:absolute;width:min(37vw,380px);height:min(54vw,500px);min-width:210px;min-height:280px;top:48%;left:50%;transform:translate(-50%,-50%);border-radius:48% 48% 8px 8px;border:1px solid rgba(238,215,165,.42);background:linear-gradient(180deg,rgba(255,244,216,.10),rgba(215,189,131,.015) 48%,rgba(8,10,18,.05));box-shadow:0 0 55px rgba(215,189,131,.13),inset 0 0 45px rgba(215,189,131,.10);clip-path:polygon(0 100%,0 34%,7% 19%,20% 7%,50% 0,80% 7%,93% 19%,100% 34%,100% 100%)}
+.portal:before{content:"";position:absolute;inset:12px;border:1px solid rgba(238,215,165,.28);border-radius:48% 48% 2px 2px;clip-path:polygon(0 100%,0 34%,7% 19%,20% 7%,50% 0,80% 7%,93% 19%,100% 34%,100% 100%)}
+.portal-light{position:absolute;top:35%;left:50%;width:160px;height:260px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(246,220,166,.35),rgba(215,189,131,.09) 40%,transparent 72%);filter:blur(22px);animation:pulse 6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.5;transform:translateX(-50%) scale(.84)}}
+.hero-content{position:relative;z-index:2;max-width:900px;margin-top:80px}
+.eyebrow{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold2);display:flex;align-items:center;justify-content:center;gap:13px}
+.eyebrow:before,.eyebrow:after{content:"";height:1px;width:32px;background:linear-gradient(90deg,transparent,var(--gold))}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(58px,10vw,132px);line-height:.88;letter-spacing:-.065em;margin:30px 0 24px}
+h1 em{font-weight:400;color:var(--gold2)}
+.hero-sub{max-width:490px;margin:0 auto;color:#c3c3c9;font-size:14px;line-height:1.9}
+.hero-meta{margin-top:42px;color:#a7a8b1;font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+.scroll-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;color:#9b9ba6;font-size:9px;letter-spacing:.2em;text-transform:uppercase}
+.scroll-cue:after{content:"";width:45px;height:1px;background:var(--gold);opacity:.7}
+.intro{background:var(--paper);color:var(--ink);padding:clamp(76px,11vw,150px) clamp(22px,10vw,150px);display:grid;grid-template-columns:.7fr 1.3fr;gap:8vw;align-items:start}
+.kicker{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#8c754c;font-weight:700}
+.intro h2{font-family:var(--serif);font-size:clamp(38px,5vw,67px);font-weight:400;line-height:1.03;letter-spacing:-.045em;margin:18px 0}
+.intro-copy{font-family:var(--serif);font-size:clamp(20px,2.3vw,29px);line-height:1.5;color:#4b4b4b;max-width:760px}
+.intro-copy strong{color:#171923;font-weight:400}
+.policy-wrap{background:var(--paper);color:var(--ink);padding:0 clamp(22px,10vw,150px) 130px}
+.policy-layout{display:grid;grid-template-columns:250px minmax(0,820px);gap:8vw;align-items:start;justify-content:center;border-top:1px solid var(--darkline);padding-top:65px}
+.toc{position:sticky;top:105px}
+.toc-title{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#8c754c;margin-bottom:18px;font-weight:700}
+.toc a{display:block;text-decoration:none;color:#77756f;font-size:12px;padding:7px 0;border-bottom:1px solid rgba(23,25,35,.07);transition:.25s}
+.toc a:hover,.toc a.active{color:#171923;padding-left:7px}
+.policy-head{display:flex;justify-content:space-between;align-items:end;gap:20px;padding-bottom:30px;border-bottom:1px solid var(--darkline);margin-bottom:12px}
+.policy-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(35px,4vw,54px);letter-spacing:-.04em;margin:0}
+.policy-head span{font-size:10px;color:#827d72;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.section{padding:34px 0;border-bottom:1px solid var(--darkline);scroll-margin-top:100px}
+.section-top{display:flex;gap:20px;align-items:baseline}
+.num{font-family:var(--serif);font-size:16px;color:#a58c5d}
+.section h3{font-family:var(--serif);font-weight:400;font-size:27px;letter-spacing:-.025em;margin:0 0 17px}
+.section p{color:#55565b;margin:10px 0;font-size:14px;line-height:1.85}
+.section strong{color:#20212a;font-weight:650}
+.section ul{padding-left:19px;margin:12px 0;color:#55565b}
+.section li{padding:4px 0;font-size:14px;line-height:1.8}
+.section li::marker{color:#ad9160}
+.note{margin:20px 0;padding:20px 22px;border-left:2px solid #b49a68;background:#e7e3d9;color:#4e4b44;font-family:var(--serif);font-size:17px;line-height:1.6}
+.email{color:#8b7043;text-decoration:none;border-bottom:1px solid #bba67f}
+.contact{background:#0b0e18;padding:110px 24px 95px;text-align:center;position:relative;overflow:hidden}
+.contact:before{content:"";position:absolute;width:600px;height:350px;border-radius:50%;background:radial-gradient(ellipse,rgba(194,163,104,.12),transparent 68%);left:50%;top:10%;transform:translateX(-50%);pointer-events:none}
+.contact .kicker{color:var(--gold)}
+.contact h2{position:relative;font-family:var(--serif);font-weight:400;font-size:clamp(48px,8vw,91px);letter-spacing:-.055em;line-height:.98;margin:22px auto;max-width:800px}
+.contact p{position:relative;color:#b6b6bf;font-size:13px}
+.contact-link{position:relative;display:inline-flex;margin-top:23px;padding:14px 23px;border:1px solid rgba(215,189,131,.55);color:var(--gold2);text-decoration:none;font-size:11px;letter-spacing:.12em;text-transform:uppercase;transition:.25s}
+.contact-link:hover{background:var(--gold2);color:#11131b}
+.footer{background:#080a12;border-top:1px solid rgba(255,255,255,.09);padding:27px clamp(22px,5vw,76px);display:flex;justify-content:space-between;gap:20px;align-items:center;color:#81838f;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.footer a{color:#c9b17f;text-decoration:none}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+.top{position:fixed;z-index:10;right:22px;bottom:22px;width:42px;height:42px;border:1px solid rgba(215,189,131,.5);border-radius:50%;background:rgba(8,10,18,.8);color:var(--gold2);display:grid;place-items:center;text-decoration:none;opacity:0;pointer-events:none;transition:.25s;backdrop-filter:blur(10px)}
+.top.show{opacity:1;pointer-events:auto}
+@media(max-width:800px){
+ .nav{padding:15px 20px}.nav-right{gap:13px;font-size:9px}.nav-right a:first-child{display:none}
+ .hero{min-height:730px;height:92svh}.orbit{width:95vw}.portal{width:60vw;height:78vw;top:43%}.hero-content{margin-top:100px}
+ .intro{grid-template-columns:1fr;gap:20px;padding-top:85px;padding-bottom:85px}
+ .policy-wrap{padding-bottom:80px}.policy-layout{grid-template-columns:1fr;gap:35px;padding-top:35px}
+ .toc{position:relative;top:auto;display:grid;grid-template-columns:1fr 1fr;column-gap:18px}
+ .toc-title{grid-column:1/-1}.toc a{font-size:11px}
+ .policy-head{align-items:start;flex-direction:column;gap:8px}.section{padding:28px 0}
+ .footer{flex-direction:column;text-align:center;gap:9px}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<nav class="nav">
+  <a class="brand" href="#top"><span class="brand-mark">P</span><span>PDF Atelier <span style="color:#9b8a69">/</span> CartoniQ</span></a>
+  <div class="nav-right"><a href="#policy">The policy</a><a href="#contact">Contact</a></div>
+</nav>
+<header class="hero" id="top">
+  <div class="stars"></div><div class="orbit"></div><div class="portal"><div class="portal-light"></div></div>
+  <div class="hero-content reveal">
+    <div class="eyebrow">PDF Atelier · A CartoniQ creation</div>
+    <h1>Privacy,<br><em>with intention.</em></h1>
+    <p class="hero-sub">Your documents are personal. Your choices should be clear. Step inside to understand how PDF Atelier handles your information.</p>
+    <div class="hero-meta">A quieter kind of technology &nbsp;·&nbsp; Effective November 15, 2026</div>
+  </div>
+  <div class="scroll-cue">Enter the policy</div>
+</header>
+<section class="intro">
+  <div class="reveal"><div class="kicker">A note from the developer</div><h2>Trust should feel<br>like a clear sky.</h2></div>
+  <div class="intro-copy reveal">PDF Atelier is designed around an <strong>offline-first philosophy.</strong> Your files stay on your device unless you choose to use a connected feature, such as an AI provider. This page explains those choices in plain language, without hiding the details.</div>
+</section>
+<main class="policy-wrap" id="policy">
+ <div class="policy-layout">
+  <aside class="toc">
+   <div class="toc-title">On this page · 12 chapters</div>
+   <a href="#s1">01 &nbsp; Introduction</a><a href="#s2">02 &nbsp; Data & local storage</a>
+   <a href="#s3">03 &nbsp; AI services & BYOK</a><a href="#s4">04 &nbsp; Advertising</a>
+   <a href="#s5">05 &nbsp; Permissions</a><a href="#s6">06 &nbsp; Data retention</a>
+   <a href="#s7">07 &nbsp; Security</a><a href="#s8">08 &nbsp; Children's privacy</a>
+   <a href="#s9">09 &nbsp; Your rights</a><a href="#s10">10 &nbsp; AI disclaimer</a>
+   <a href="#s11">11 &nbsp; Policy changes</a><a href="#s12">12 &nbsp; Contact</a>
+  </aside>
+  <article>
+   <div class="policy-head reveal"><h2>The privacy policy</h2><span>Last updated · 15 Nov 2026</span></div>
+   <section class="section reveal" id="s1"><div class="section-top"><span class="num">01</span><h3>Introduction</h3></div>
+    <p>This Privacy Policy applies to the <strong>PDF Atelier</strong> Android application (the "App"), developed by Mohd Arsh under the brand CartoniQ. We are committed to protecting your privacy and complying with global data protection laws, including the GDPR (EU), CCPA (California), and the DPDP Act (India).</p></section>
+   <section class="section reveal" id="s2"><div class="section-top"><span class="num">02</span><h3>Data Collection and Local Storage</h3></div>
+    <div class="note">PDF Atelier is designed with an offline-first architecture.</div>
+    <ul><li><strong>Local Storage:</strong> All PDF files, images, annotations, and app settings are stored locally on your device. We do not own, operate, or maintain any servers that store your personal documents.</li>
+    <li><strong>No Account Required:</strong> The App does not require you to create an account, provide an email address, or log in.</li>
+    <li><strong>Data Deletion:</strong> You can delete all locally stored app data at any time by going to the App's Settings and selecting "Delete My Data" or by uninstalling the App.</li></ul></section>
+   <section class="section reveal" id="s3"><div class="section-top"><span class="num">03</span><h3>Third-Party AI Services &amp; Bring Your Own Key (BYOK)</h3></div>
+    <p>The App integrates AI features using a "Bring Your Own Key" model. You must provide your own API key to use the AI features.</p>
+    <ul><li><strong>Supported Providers:</strong> You can choose to connect to Google Gemini, OpenAI, Groq, OpenRouter, or a Custom OpenAI-compatible endpoint.</li>
+    <li><strong>Data Transfer:</strong> When you use the AI features, the text or images you provide are sent directly from your device to your chosen AI provider. This data is subject to the respective provider's Privacy Policy (e.g., Google, OpenAI, Groq).</li>
+    <li><strong>Local Key Encryption:</strong> Your API keys are encrypted and stored <strong>locally on your device only</strong>. We do not collect, transmit, or store your API keys on our servers.</li>
+    <li><strong>No Training:</strong> We do not use your prompts or documents to train any AI models.</li></ul></section>
+   <section class="section reveal" id="s4"><div class="section-top"><span class="num">04</span><h3>Third-Party Advertising (Google AdMob)</h3></div>
+    <p>If the free version of the App displays ads, <strong>Google AdMob</strong> may collect your device's Advertising ID and approximate location to serve relevant ads. You can manage ad consent within the App's settings via the User Messaging Platform (UMP).</p></section>
+   <section class="section reveal" id="s5"><div class="section-top"><span class="num">05</span><h3>Permissions</h3></div>
+    <p>The App may request the following permissions to function correctly:</p>
+    <ul><li><strong>Storage/Photos/Media:</strong> Required to open, read, edit, and save PDF documents and images on your device.</li>
+    <li><strong>Camera:</strong> Required for the "Scan" and "OCR" features to capture documents.</li>
+    <li><strong>Microphone:</strong> Required if you use voice-to-text or voice notes.</li></ul></section>
+   <section class="section reveal" id="s6"><div class="section-top"><span class="num">06</span><h3>Data Retention</h3></div>
+    <p>We retain your data only for as long as necessary. All document data is stored locally on your device and is retained until you delete it or uninstall the App. AI prompts are retained by the chosen AI provider only for the duration of the processing request.</p></section>
+   <section class="section reveal" id="s7"><div class="section-top"><span class="num">07</span><h3>Security</h3></div>
+    <p>We take security seriously. Any sensitive documents saved in the App's secure vault are protected using AES-256 encryption. API keys are stored using encrypted local storage. However, please remember that no method of electronic storage is 100% secure.</p></section>
+   <section class="section reveal" id="s8"><div class="section-top"><span class="num">08</span><h3>Children's Privacy</h3></div>
+    <p>The App is not directed to children under the age of 13. We do not knowingly collect personal information from children.</p></section>
+   <section class="section reveal" id="s9"><div class="section-top"><span class="num">09</span><h3>Your Data Protection Rights (GDPR, CCPA, DPDP)</h3></div>
+    <p>Depending on your location, you may have the following rights:</p>
+    <ul><li><strong>Right to Access:</strong> You can request a copy of the data we hold about you (note: we do not store any data on our servers).</li>
+    <li><strong>Right to Erasure:</strong> You can delete all local data via the App's settings.</li>
+    <li><strong>Right to Object:</strong> You can choose not to use the AI features or disable personalized ads in settings.</li></ul></section>
+   <section class="section reveal" id="s10"><div class="section-top"><span class="num">10</span><h3>Disclaimer of Liability and AI Accuracy</h3></div>
+    <div class="note"><strong>Important:</strong> AI-generated content (including text, summaries, and image analysis) is provided "as is" and may contain inaccuracies, errors, or biases.</div>
+    <p>You are solely responsible for verifying any information generated by the App before relying on it. CartoniQ and Mohd Arsh disclaim all warranties and liability for errors or omissions in AI-generated content. You agree not to use the App for illegal purposes or to upload sensitive personal data of others without their consent.</p></section>
+   <section class="section reveal" id="s11"><div class="section-top"><span class="num">11</span><h3>Changes to This Policy</h3></div>
+    <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Effective Date."</p></section>
+   <section class="section reveal" id="s12"><div class="section-top"><span class="num">12</span><h3>Contact Us</h3></div>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact the developer:</p>
+    <ul><li><strong>Email:</strong> <a class="email" href="mailto:cartoniq.business@gmail.com">cartoniq.business@gmail.com</a></li>
+    <li><strong>Website:</strong> <a class="email" href="https://cartoniq.runs-at.dev" target="_blank" rel="noopener">https://cartoniq.runs-at.dev</a></li></ul></section>
+  </article>
+ </div>
+</main>
+<section class="contact" id="contact">
+ <div class="kicker">A human is here</div>
+ <h2>Questions deserve<br><em style="color:#e0c994">clear answers.</em></h2>
+ <p>Privacy questions, concerns or requests? Reach the developer directly.</p>
+ <a class="contact-link" href="mailto:cartoniq.business@gmail.com">Write to CartoniQ ↗</a>
+</section>
+<footer class="footer"><span>© 2026 Mohd Arsh · CartoniQ</span><span>Made with care for <a href="#top">PDF Atelier</a></span><span>Effective · 15 November 2026</span></footer>
+<a class="top" id="topBtn" href="#top" aria-label="Back to top">↑</a>
+<script>
+const progress=document.getElementById('progress'),topBtn=document.getElementById('topBtn');
+function onScroll(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?scrollY/max*100:0)+'%';topBtn.classList.toggle('show',scrollY>700)}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const links=[...document.querySelectorAll('.toc a')],sections=links.map(a=>document.querySelector(a.getAttribute('href')));
+const spy=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-18% 0px -68% 0px'});
+sections.forEach(s=>s&&spy.observe(s));
+</script>
+</body></html>

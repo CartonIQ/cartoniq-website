@@ -5,6 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { OpeningSequence } from './components/OpeningSequence';
+import Portfolio from './pages/Portfolio';
 import { SiteHeader } from './components/SiteHeader';
 import { KineticHero } from './components/KineticHero';
 import { CommandTerminal } from './components/CommandTerminal';
@@ -17,6 +18,10 @@ import { CinematicFinale } from './components/CinematicFinale';
 import { useReducedMotion } from './hooks/useReducedMotion';
 
 export default function App() {
+  if (window.location.pathname === "/portfolio") {
+    return <Portfolio />;
+  }
+
   const { reducedMotion, toggleMotion } = useReducedMotion();
   const [showOpening, setShowOpening] = useState<boolean>(() => {
     if (typeof window === 'undefined') return true;
