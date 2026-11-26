@@ -28,14 +28,14 @@ export const KineticHero: React.FC<KineticHeroProps> = ({ reducedMotion, onExplo
       {/* Decorative Technical HUD Lines */}
       <div className="absolute top-20 right-4 sm:right-8 hidden md:flex flex-col items-end z-50">
         <a
-          href="https://cartoniq.github.io/Galaxy-/"
+          href="/portfolio"
           target="_blank"
           rel="noopener noreferrer"
           className="group relative px-4 py-2 bg-black/50 backdrop-blur-sm border border-[#ff0033] text-[#ff0033] font-mono text-[10px] uppercase tracking-widest hover:bg-[#ff0033] hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,0,51,0.2)] hover:shadow-[0_0_30px_rgba(255,0,51,0.8)] overflow-hidden"
         >
           <span className="relative z-10 flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#ff0033] animate-pulse group-hover:bg-white"></span>
-            [ Enter The Galaxy ]
+            <strong>PORTFOLIO</strong>
           </span>
           <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
         </a>
