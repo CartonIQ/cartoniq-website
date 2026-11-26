@@ -35,7 +35,10 @@ export const KineticHero: React.FC<KineticHeroProps> = ({ reducedMotion, onExplo
         >
           <span className="relative z-10 flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#ff0033] animate-pulse group-hover:bg-white"></span>
-            <strong>PORTFOLIO</strong>
+            <span className="relative inline-flex items-center justify-center px-8 py-4 font-mono font-black tracking-[0.2em] uppercase text-white bg-[#ff0033] border border-[#ff0033] shadow-[0_0_20px_rgba(255,0,51,0.6)] transition-all duration-300 hover:bg-black hover:text-[#ff0033] hover:scale-105 group cursor-pointer">
+  [ ACCESS PORTFOLIO ]
+  <svg className="w-4 h-4 ml-3 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+</span>
           </span>
           <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
         </a>
