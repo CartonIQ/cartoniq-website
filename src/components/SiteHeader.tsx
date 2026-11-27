@@ -75,7 +75,7 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({ reducedMotion, onToggleM
           <a
             href="#"
             className="flex items-center gap-3 group focus:outline-none focus:ring-1 focus:ring-[#ff0033]"
-            aria-label="CARTONIQ Home"
+            aria-label="CartonIQ Home"
           >
             <div className="relative w-8 h-8 sm:w-9 sm:h-9 bg-zinc-950 border border-zinc-800 flex items-center justify-center group-hover:border-[#ff0033] transition-colors">
               <span className="font-display font-black text-white text-base sm:text-lg">C</span>
@@ -83,7 +83,7 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({ reducedMotion, onToggleM
             </div>
             <div className="flex flex-col">
               <span className="font-display font-black tracking-tighter text-lg sm:text-xl text-white group-hover:text-[#ff0033] transition-colors">
-                CARTONIQ
+                CartonIQ
               </span>
               <span className="text-[9px] font-mono tracking-widest text-zinc-500 uppercase -mt-1 hidden xs:block">
                 MOHD ARSH // DEV

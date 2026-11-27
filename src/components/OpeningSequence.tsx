@@ -19,7 +19,7 @@ export const OpeningSequence: React.FC<OpeningSequenceProps> = ({ onComplete, re
     }
 
     const t1 = setTimeout(() => setStep(1), 250); // lines & grid
-    const t2 = setTimeout(() => setStep(2), 650); // CARTONIQ letters stagger
+    const t2 = setTimeout(() => setStep(2), 650); // CartonIQ letters stagger
     const t3 = setTimeout(() => setStep(3), 1400); // scanline sweep
     const t4 = setTimeout(() => setStep(4), 1900); // tagline
     const t5 = setTimeout(() => setStep(5), 2400); // developer intro
@@ -59,7 +59,7 @@ export const OpeningSequence: React.FC<OpeningSequenceProps> = ({ onComplete, re
       <div className="relative z-10 flex items-center justify-between text-xs font-mono text-zinc-400 border-b border-zinc-900 pb-4">
         <div className="flex items-center gap-3">
           <span className="inline-block w-2 h-2 bg-[#ff0033] animate-pulse"></span>
-          <span className="text-white font-bold tracking-widest">CARTONIQ // OS_CORE</span>
+          <span className="text-white font-bold tracking-widest">CartonIQ // OS_CORE</span>
           <span className="hidden sm:inline text-zinc-600">|</span>
           <span className="hidden sm:inline text-zinc-400">INIT_SYS: ONLINE</span>
         </div>
@@ -76,7 +76,7 @@ export const OpeningSequence: React.FC<OpeningSequenceProps> = ({ onComplete, re
         </div>
       </div>
 
-      {/* Centerpiece: Giant Dominating CARTONIQ Typography */}
+      {/* Centerpiece: Giant Dominating CartonIQ Typography */}
       <div className="relative z-10 flex-1 flex flex-col justify-center items-center my-6">
         {/* Subtle tech label */}
         <div className={`text-xs font-mono tracking-widest text-[#ff0033] mb-4 transition-all duration-500 ${step >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
@@ -175,7 +175,7 @@ export const OpeningSequence: React.FC<OpeningSequenceProps> = ({ onComplete, re
       <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-zinc-600 border-t border-zinc-900 pt-4 gap-2">
         <div className="flex items-center gap-2">
           <Zap className="w-3.5 h-3.5 text-[#ff0033]" />
-          <span>CARTONIQ_ARCH v2.6 // PURE 2D EXPERIMENTAL ENGINE</span>
+          <span>CartonIQ_ARCH v2.6 // PURE 2D EXPERIMENTAL ENGINE</span>
         </div>
         <div>
           <span>DOMAIN: {PROFILE.websiteUrl.replace('https://', '')}</span>

@@ -66,7 +66,7 @@ export const KineticHero: React.FC<KineticHeroProps> = ({ reducedMotion, onExplo
           </span>
         </div>
 
-        {/* Giant CARTONIQ Title with 2D perspective / shift */}
+        {/* Giant CartonIQ Title with 2D perspective / shift */}
         <div className="relative select-none">
           <h1 
             className="text-[14vw] sm:text-[12vw] md:text-[11vw] font-black tracking-tighter leading-[0.88] font-display text-white transition-transform duration-200 ease-out w-full text-center"
@@ -87,7 +87,7 @@ export const KineticHero: React.FC<KineticHeroProps> = ({ reducedMotion, onExplo
             }}
             aria-hidden="true"
           >
-            CARTONIQ
+            CartonIQ
           </div>
         </div>
 

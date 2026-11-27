@@ -103,7 +103,7 @@ const STATS = [
 const TIMELINE = [
   { year: "2020 to 2025", title: "Owner and Manager, Harsh Packaging", text: "Ran day-to-day operations at a corrugated packaging business in New Delhi." },
   { year: "2025", title: "Found Android development", text: "Picked up a phone and started writing apps with nothing but a terminal." },
-  { year: "2026", title: "Founded CartoniQ", text: "Built 29+ apps. SilentSignal launched on the Play Store." },
+  { year: "2026", title: "Founded CartonIQ", text: "Built 29+ apps. SilentSignal launched on the Play Store." },
 ];
 
 const PLAY_APPS = [
@@ -165,7 +165,7 @@ function Hero() {
           <a href="#works" className="btn btn-gold">View my work</a>
           <a href={`mailto:${EMAIL}`} className="btn btn-pale">Contact me</a>
         </div>
-        <p className="hero-name">Mohd Arsh, Founder of CartoniQ</p>
+        <p className="hero-name">Mohd Arsh, Founder of CartonIQ</p>
       </motion.div>
     </header>
     <Skyline />
@@ -285,7 +285,7 @@ function VideoFeature() {
       <div className="wrap video-grid">
         <div className="video-copy">
           <h2 className="h2">See PDF Atelier in action</h2>
-          <p>A premium PDF and AI studio, built by CartoniQ. Watch it work before it reaches the Play Store.</p>
+          <p>A premium PDF and AI studio, built by CartonIQ. Watch it work before it reaches the Play Store.</p>
           <a className="btn btn-gold" href={`https://youtu.be/${VIDEO_ID}`} target="_blank" rel="noreferrer">Watch on YouTube</a>
         </div>
         <div className="video-frame">
@@ -475,7 +475,7 @@ function Footer() {
   return (
     <footer className="footer">
       <Corners />
-      <p className="footer-mark" aria-hidden="true">CartoniQ</p>
+      <p className="footer-mark" aria-hidden="true">CartonIQ</p>
       <nav className="footer-links" aria-label="Footer">
         <a href={`mailto:${EMAIL}`}>Email</a>
         <a href={`https://github.com/${GH_USER}`} target="_blank" rel="noreferrer">GitHub</a>

@@ -1,5 +1,5 @@
 export const PROFILE = {
-  brand: 'CARTONIQ',
+  brand: 'CartonIQ',
   developer: 'Mohd Arsh',
   role: 'Android App Developer',
   title: 'Android App Developer & Software Craftsman',

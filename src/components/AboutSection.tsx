@@ -17,7 +17,7 @@ export const AboutSection: React.FC = () => {
           </h2>
         </div>
         <div className="text-xs font-mono text-zinc-500 max-w-md">
-          {PROFILE.role} behind CARTONIQ. Building native mobile solutions and streamlining Linux toolchains.
+          {PROFILE.role} behind CartonIQ. Building native mobile solutions and streamlining Linux toolchains.
         </div>
       </div>
 
@@ -35,7 +35,7 @@ export const AboutSection: React.FC = () => {
                   {PROFILE.developer}
                 </h3>
                 <p className="text-xs font-mono text-zinc-400 mt-0.5">
-                  CARTONIQ // {PROFILE.role}
+                  CartonIQ // {PROFILE.role}
                 </p>
               </div>
 

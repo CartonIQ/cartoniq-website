@@ -18,8 +18,8 @@ export const CommandTerminal: React.FC<CommandTerminalProps> = ({ onSelectProjec
   const terminalEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const initialWelcome = `CARTONIQ DEV TERMINAL [Version 2.6.4-android-lab]
-(c) 2026 Mohd Arsh // CARTONIQ. All rights reserved.
+  const initialWelcome = `CartonIQ DEV TERMINAL [Version 2.6.4-android-lab]
+(c) 2026 Mohd Arsh // CartonIQ. All rights reserved.
 Type 'help' to inspect available system commands.`;
 
   useEffect(() => {
@@ -72,7 +72,7 @@ Type 'help' to inspect available system commands.`;
       case 'about':
         outputContent = (
           <div className="space-y-2 text-zinc-300">
-            <p className="text-white font-bold text-sm">DEVELOPER: {PROFILE.developer} (CARTONIQ)</p>
+            <p className="text-white font-bold text-sm">DEVELOPER: {PROFILE.developer} (CartonIQ)</p>
             <p className="text-[#ff0033]">{PROFILE.role} // {PROFILE.tagline}</p>
             <p className="text-zinc-400 leading-relaxed text-xs">{PROFILE.bio}</p>
             <div className="border-l-2 border-[#ff0033] pl-3 py-1 text-xs text-zinc-300 italic">
@@ -155,7 +155,7 @@ Type 'help' to inspect available system commands.`;
       case 'github':
         outputContent = (
           <div className="space-y-1 text-zinc-300">
-            <p className="text-white font-bold">CARTONIQ GITHUB:</p>
+            <p className="text-white font-bold">CartonIQ GITHUB:</p>
             <p className="text-zinc-400 text-xs">Explore public source code, android repos, and experiments.</p>
             <a
               href={PROFILE.githubUrl}

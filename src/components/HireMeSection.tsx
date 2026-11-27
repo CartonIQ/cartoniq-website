@@ -33,7 +33,7 @@ export const HireMeSection: React.FC = () => {
   };
 
   const generateInquiryText = () => {
-    return `PROJECT INQUIRY FOR CARTONIQ (Mohd Arsh)
+    return `PROJECT INQUIRY FOR CartonIQ (Mohd Arsh)
 -----------------------------------------------
 Client / Company : ${form.clientName || 'Not specified'}
 Contact Email    : ${form.email || 'Not specified'}

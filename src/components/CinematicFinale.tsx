@@ -93,7 +93,7 @@ export const CinematicFinale: React.FC<CinematicFinaleProps> = ({ reducedMotion,
               <div className="w-4 h-4 bg-[#ff0033] flex items-center justify-center text-white font-black text-[10px]">
                 C
               </div>
-              <span className="font-display font-black text-white text-base tracking-tight">CARTONIQ</span>
+              <span className="font-display font-black text-white text-base tracking-tight">CartonIQ</span>
               <span className="text-zinc-600">/</span>
               <span className="text-zinc-400">{PROFILE.developer}</span>
             </div>

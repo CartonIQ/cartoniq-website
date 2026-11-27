@@ -9,7 +9,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     category: 'web',
     status: 'Active',
     verified: true,
-    description: 'The production digital showcase for CARTONIQ. Engineered with React, Vite, Tailwind CSS, kinetic typography, an interactive developer terminal, and zero 3D overhead.',
+    description: 'The production digital showcase for CartonIQ. Engineered with React, Vite, Tailwind CSS, kinetic typography, an interactive developer terminal, and zero 3D overhead.',
     longDescription: 'Engineered as an interactive personal developer operating system. Features include a terminal emulator with safe commands, real-time client inquiry pipeline via mailto & clipboard fallback, responsive 2D particle canvas, and strict adherence to accessibility and zero-bloat principles.',
     technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion'],
     features: [

@@ -53,7 +53,7 @@ export default function App() {
       {/* Ambient Scanline Grid Layer */}
       <div className="fixed inset-0 bg-dots opacity-20 pointer-events-none z-0" />
 
-      {/* Opening Kinetic Experience (dominating CARTONIQ typography) */}
+      {/* Opening Kinetic Experience (dominating CartonIQ typography) */}
       {showOpening && (
         <OpeningSequence
           onComplete={handleOpeningComplete}
