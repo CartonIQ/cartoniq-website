@@ -29,7 +29,10 @@ export function Founder() {
   return (
     <section className="neo-founder-strip" id="founder" aria-labelledby="founder-title">
       <div className="neo-founder-heading"><p className="neo-kicker mono">The person behind the pixels</p><h2 id="founder-title">One device.<br/><em>A thousand ideas.</em></h2></div>
-      <div className="neo-founder-story"><p>CartonIQ is built independently by Mohd Arsh in New Delhi, India. The journey began in corrugated-packaging operations and grew into a one-person Android software studio.</p><p>Today the focus is practical, carefully designed applications — built with curiosity, persistence and a belief that useful technology should feel effortless.</p><a href="https://github.com/CartonIQ" target="_blank" rel="noopener noreferrer" className="neo-text-arrow">Explore the work on GitHub ↗</a></div>
+      <div className="neo-founder-story">
+        <p>CartonIQ is built independently by Mohd Arsh in New Delhi, India. No PC, no team, no office—just an Android phone, Termux, and pure grit.</p>
+        <p>Before transitioning to tech, I managed operations at <strong>Harsh Packaging</strong> (2020–2025), mastering the corrugated packaging industry. That hands-on business experience now fuels my approach to building practical, robust software.</p>
+        <p>Today, I build premium, offline-first Android applications. Everything is crafted with curiosity, persistence, and a belief that useful technology should feel effortless.</p><a href="https://github.com/CartonIQ" target="_blank" rel="noopener noreferrer" className="neo-text-arrow">Explore the work on GitHub ↗</a></div>
     </section>
   );
 }

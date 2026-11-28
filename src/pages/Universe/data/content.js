@@ -34,9 +34,9 @@ export const PRINCIPLES = [
 ];
 
 export const JOURNEY = [
-  { year: "2020–2025", title: "Owner and Manager, Harsh Packaging", text: "Ran day-to-day operations at a corrugated packaging business in New Delhi." },
-  { year: "2025", title: "Found Android development", text: "Picked up a phone and started writing apps with nothing but a terminal." },
-  { year: "2026", title: "Founded CartonIQ", text: "An independent studio for offline-first Android apps. SilentSignal launched on Google Play." },
+  { year: "2020–2025", title: "Owner & Manager at Harsh Packaging", text: "Managed daily operations, client relationships, and production for a corrugated packaging business in New Delhi." },
+  { year: "2025", title: "Mastered Android from a Phone", text: "Started building apps entirely on an Android phone using Termux. No laptop, no PC, no team—just pure grit." },
+  { year: "2026", title: "Founded CartonIQ", text: "Launched SilentSignal on Google Play and built 29+ open-source projects. Now building premium, offline-first software." },
 ];
 
 // Pixel glyphs carried over from the original site. Letters map to colours in Glyphs.jsx.
