@@ -1,0 +1,121 @@
+/* ---------- Design tokens ----------
+   Palette: ink, bone, signal red. Kraft appears only as the cardboard edge
+   inside the 3D carton. Red text on light uses --red-deep for contrast. */
+:root {
+  --ink: #0b0b0c;
+  --ink-2: #151517;
+  --ink-3: #222226;
+  --bone: #eee9df;
+  --bone-2: #e3ddd0;
+  --red: #e4311f;
+  --red-deep: #c8210f;
+  --red-bright: #ff5a46;
+  --kraft: #b98b5b;
+
+  --line-d: rgba(238, 233, 223, 0.18);
+  --line-l: rgba(11, 11, 12, 0.22);
+  --muted-d: rgba(238, 233, 223, 0.72);
+  --muted-l: rgba(11, 11, 12, 0.72);
+
+  --display: "Archivo Variable", "Arial Black", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --rail: 0px;
+  --topbar: 56px;
+  --pad: clamp(20px, 5vw, 64px);
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+@media (min-width: 1024px) {
+  :root { --rail: 72px; --topbar: 0px; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--topbar) + 8px); }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+html.dialog-open, html.menu-open { overflow: hidden; }
+
+body {
+  margin: 0;
+  padding-left: var(--rail);
+  background: var(--ink);
+  color: var(--bone);
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-size: 1rem;
+  line-height: 1.55;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+img, svg, canvas, video, iframe { max-width: 100%; display: block; }
+h1, h2, h3, p, ol, ul, dl, figure { margin: 0; padding: 0; }
+ol, ul { list-style: none; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+[hidden] { display: none !important; }
+
+:focus-visible { outline: 3px solid var(--red-bright); outline-offset: 3px; }
+.sec-light :focus-visible, .sec-red :focus-visible, .readme-dialog :focus-visible { outline-color: var(--ink); }
+.sec-red .form :focus-visible { outline-color: var(--red-deep); }
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: fixed; left: 12px; top: -80px; z-index: 300; background: var(--bone); color: var(--ink); padding: 12px 16px; font-family: var(--mono); text-decoration: none; }
+.skip:focus { top: 12px; }
+
+.mono { font-family: var(--mono); font-weight: 400; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.no-break { white-space: nowrap; }
+
+/* ---------- Type ---------- */
+.h2 {
+  font-weight: 800; font-stretch: 112%;
+  font-size: clamp(2.1rem, 6.2vw, 5.6rem);
+  line-height: 0.96; letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.h2-xl { font-size: clamp(2.4rem, 8.4vw, 8rem); }
+.h3 { font-weight: 800; font-stretch: 108%; font-size: clamp(1.5rem, 3.4vw, 2.4rem); line-height: 1; letter-spacing: -0.02em; }
+.lede { font-size: clamp(1.05rem, 1.6vw, 1.3rem); line-height: 1.5; max-width: 46ch; margin-top: 20px; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding: 12px 22px;
+  font-family: var(--mono); font-weight: 500; font-size: 0.8rem; letter-spacing: 0.07em; text-transform: uppercase;
+  text-decoration: none; text-align: center;
+  border: 2px solid currentColor; background: transparent; border-radius: 0;
+  transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease), background 0.18s, color 0.18s;
+}
+.btn:hover { transform: translate(-3px, -3px); box-shadow: 5px 5px 0 currentColor; }
+.btn:active { transform: translate(0, 0); box-shadow: none; }
+.btn-sm { min-height: 44px; padding: 10px 16px; font-size: 0.74rem; }
+.btn-red { background: var(--red-deep); border-color: var(--red-deep); color: #fff; }
+.btn-red:hover { box-shadow: 5px 5px 0 var(--bone); }
+.sec-light .btn-red:hover { box-shadow: 5px 5px 0 var(--ink); }
+.btn-ink { background: var(--ink); border-color: var(--ink); color: var(--bone); }
+.btn-ink:hover { box-shadow: 5px 5px 0 var(--ink); }
+.sec-red .btn-ink:hover { box-shadow: 5px 5px 0 var(--bone); }
+.btn-line { color: var(--bone); border-color: var(--bone); }
+.btn-ghost { color: var(--ink); border-color: var(--ink); }
+.btn-disabled { border-style: dashed; opacity: 0.6; cursor: not-allowed; }
+.btn-disabled:hover { transform: none; box-shadow: none; }
+.link-btn { background: none; border: 0; padding: 0; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.link-arrow { color: inherit; text-underline-offset: 4px; }
+
+/* ---------- Scroll reveal ---------- */
+.rv { opacity: 0; transform: translateY(26px); transition: opacity 0.8s var(--ease) var(--d, 0ms), transform 0.8s var(--ease) var(--d, 0ms); }
+.rv.in { opacity: 1; transform: none; }
+
+/* ---------- Custom cursor (fine pointers only) ---------- */
+.cursor {
+  position: fixed; left: 0; top: 0; z-index: 400; width: 12px; height: 12px; margin: -6px 0 0 -6px;
+  background: var(--red); pointer-events: none; opacity: 0;
+  transition: opacity 0.2s, width 0.2s var(--ease), height 0.2s var(--ease), margin 0.2s var(--ease), background 0.2s;
+  mix-blend-mode: normal;
+}
+.cursor.on { opacity: 1; }
+.cursor.hot { width: 44px; height: 44px; margin: -22px 0 0 -22px; background: transparent; border: 2px solid var(--red-bright); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+  .rv { opacity: 1; transform: none; }
+}

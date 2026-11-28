@@ -1,0 +1,125 @@
+/* ---------- Wordmark ---------- */
+.wordmark { font-weight: 800; font-stretch: 112%; letter-spacing: -0.03em; }
+.wordmark b { color: var(--red); font-weight: 800; }
+
+/* ---------- Desktop rail ---------- */
+.rail {
+  display: none; position: fixed; z-index: 100; inset: 0 auto 0 0; width: var(--rail);
+  background: var(--ink); border-right: 1px solid var(--line-d); flex-direction: column;
+}
+.rail-logo {
+  display: grid; place-items: center; height: 72px; border-bottom: 1px solid var(--line-d);
+  font-weight: 800; font-stretch: 112%; font-size: 1.15rem; letter-spacing: -0.04em; text-decoration: none;
+}
+.rail-logo b { color: var(--red); }
+.rail ol { display: flex; flex-direction: column; justify-content: center; flex: 1; overflow: visible; }
+.rail li { position: relative; }
+.rail li a {
+  display: flex; align-items: center; justify-content: center; height: 44px; position: relative;
+  text-decoration: none; color: var(--muted-d);
+}
+.rail-n { font-size: 0.72rem; }
+.rail-l {
+  position: absolute; left: calc(var(--rail) - 1px); top: 0; height: 44px; display: flex; align-items: center;
+  padding: 0 18px; white-space: nowrap; background: var(--red-deep); color: #fff;
+  font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase;
+  opacity: 0; transform: translateX(-8px); pointer-events: none; transition: opacity 0.18s, transform 0.18s var(--ease);
+}
+.rail li a:hover, .rail li a:focus-visible { color: var(--bone); }
+.rail li a:hover .rail-l, .rail li a:focus-visible .rail-l { opacity: 1; transform: none; }
+.rail li a[aria-current="true"] { color: var(--red-bright); }
+.rail li a[aria-current="true"]::before { content: ""; position: absolute; left: 0; top: 10px; bottom: 10px; width: 3px; background: var(--red); }
+@media (min-width: 1024px) { .rail { display: flex; } .topbar, .menu { display: none !important; } }
+
+/* ---------- Mobile top bar + menu ---------- */
+.topbar {
+  position: fixed; z-index: 100; inset: 0 0 auto 0; height: var(--topbar); padding: 0 var(--pad);
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: rgba(11, 11, 12, 0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line-d);
+}
+.topbar-logo { text-decoration: none; font-size: 1.25rem; }
+.topbar-now { color: var(--muted-d); margin-left: auto; font-size: 0.7rem; }
+@media (max-width: 420px) { .topbar-now { display: none; } }
+.menu-btn { min-height: 44px; min-width: 76px; padding: 0 14px; background: transparent; border: 2px solid var(--bone); color: var(--bone); }
+.menu { position: fixed; z-index: 90; inset: var(--topbar) 0 0 0; background: var(--ink); overflow-y: auto; padding: 20px var(--pad) 40px; }
+.menu ol { display: flex; flex-direction: column; }
+.menu a {
+  display: flex; align-items: baseline; gap: 16px; padding: 14px 0; min-height: 56px; border-bottom: 1px solid var(--line-d);
+  text-decoration: none; font-weight: 800; font-stretch: 110%; font-size: clamp(1.7rem, 8vw, 2.6rem); letter-spacing: -0.02em;
+}
+.menu a .mono { color: var(--red-bright); width: 2.2rem; flex: none; }
+
+/* ---------- Hero ---------- */
+.hero { --p: 0; position: relative; height: 210svh; background: var(--ink); }
+@supports not (height: 1svh) { .hero { height: 210vh; } }
+.hero-stage {
+  position: sticky; top: 0; height: 100svh; min-height: 520px; overflow: hidden;
+  display: grid; grid-template-rows: 1fr auto; padding: calc(var(--topbar) + 16px) var(--pad) 18px;
+}
+@supports not (height: 1svh) { .hero-stage { height: 100vh; } }
+
+.hero-art { position: absolute; inset: var(--topbar) 0 auto 0; height: 50svh; }
+.hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: pan-y; }
+.box-fallback { width: min(100%, 520px); height: 100%; margin: 0 auto; }
+.hero-art::after { content: ""; position: absolute; inset: auto 0 0 0; height: 30%; background: linear-gradient(to bottom, transparent, var(--ink)); pointer-events: none; }
+
+.hero-top { position: relative; z-index: 2; display: none; justify-content: space-between; color: var(--muted-d); }
+
+.hero-copy, .hero-open { position: relative; z-index: 2; align-self: end; margin-bottom: 44px; max-width: 44rem; transition: opacity 0.5s var(--ease), transform 0.5s var(--ease), visibility 0.5s; }
+.hero-title { font-weight: 800; font-stretch: 112%; font-size: clamp(2rem, 9.2vw, 3.6rem); line-height: 0.95; letter-spacing: -0.03em; text-wrap: balance; }
+.hero-sub { margin-top: 14px; max-width: 34rem; color: var(--muted-d); font-size: 0.98rem; line-height: 1.45; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.hero-open { position: absolute; left: var(--pad); right: var(--pad); bottom: 62px; margin-bottom: 0; opacity: 0; visibility: hidden; transform: translateY(16px); }
+.hero-open-title { font-weight: 800; font-stretch: 112%; font-size: clamp(2.6rem, 10vw, 5rem); line-height: 0.95; letter-spacing: -0.03em; }
+.hero-open-sub { margin: 14px 0 20px; max-width: 30rem; color: var(--muted-d); }
+.hero[data-phase="b"] .hero-copy { opacity: 0; visibility: hidden; transform: translateY(-16px); }
+.hero[data-phase="b"] .hero-open { opacity: 1; visibility: visible; transform: none; }
+
+.hero-foot { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 16px; color: var(--muted-d); }
+.hero-bar { flex: 0 0 min(40%, 220px); height: 2px; background: var(--line-d); }
+.hero-bar i { display: block; height: 100%; background: var(--red); transform-origin: left; transform: scaleX(var(--p)); }
+
+@media (min-width: 720px) {
+  .hero-title { font-size: clamp(2.6rem, 7vw, 5.4rem); }
+}
+@media (min-width: 1024px) {
+  .hero { height: 230svh; }
+  .hero-stage { padding: 28px var(--pad) 28px; }
+  .hero-top { display: flex; }
+  .hero-art { inset: 0 0 0 auto; width: 64%; height: auto; }
+  .hero-art::after { inset: 0 auto 0 0; width: 28%; height: auto; background: linear-gradient(to right, var(--ink), transparent); }
+  .hero-copy, .hero-open { margin-bottom: 48px; max-width: min(46vw, 40rem); }
+  .hero-title { font-size: clamp(3rem, 5.1vw, 5.8rem); }
+  .hero-sub { font-size: 1.1rem; margin-top: 22px; }
+  .hero-ctas { margin-top: 28px; }
+  .hero-open { max-width: min(40vw, 34rem); }
+}
+
+/* ---------- Footer / final experience ---------- */
+.end { background: var(--ink); border-top: 1px solid var(--line-d); overflow: hidden; }
+.tape { background: var(--red-deep); color: #fff; overflow: hidden; padding: 12px 0; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.tape-track { display: flex; gap: 36px; width: max-content; white-space: nowrap; }
+@media (prefers-reduced-motion: no-preference) { .tape-track { animation: tape 38s linear infinite; } }
+@keyframes tape { to { transform: translateX(-50%); } }
+.end-inner { padding-top: clamp(40px, 8vw, 96px); padding-bottom: 36px; }
+.end-mark { font-size: clamp(2.8rem, 14.5vw, 15rem); line-height: 0.82; margin-left: -0.04em; }
+.end-links { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: 36px; }
+.end-links a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; border-bottom: 1px solid transparent; }
+.end-links a:hover { color: var(--red-bright); border-color: currentColor; }
+.end-copy { margin-top: 20px; color: var(--muted-d); }
+
+/* ---------- Layer legend (shown once the phone is apart) ---------- */
+.hero-layers { display: none; position: absolute; z-index: 2; right: var(--pad); bottom: 70px; gap: 6px; color: var(--muted-d); opacity: 0; transform: translateY(8px); transition: opacity 0.5s var(--ease), transform 0.5s var(--ease); }
+.hero-layers span { color: var(--red-bright); margin-right: 10px; }
+.hero-layers[data-show="true"] { opacity: 1; transform: none; }
+@media (min-width: 1024px) { .hero-layers { display: grid; } }
+
+/* Phones and tablets, including Chrome's "desktop site" mode on Android:
+   the artwork fills all the space above the text instead of a fixed 50% band. */
+@media (max-width: 1023px) {
+  .hero-stage { grid-template-rows: minmax(0, 1fr) auto auto; }
+  .hero-art { position: relative; inset: auto; height: auto; min-height: 280px; grid-row: 1; margin: 0 calc(var(--pad) * -1); }
+  .hero-copy { grid-row: 2; align-self: end; margin-bottom: 28px; }
+  .hero-foot { grid-row: 3; }
+  .hero-open { bottom: 62px; }
+}

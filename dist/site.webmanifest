@@ -1,0 +1,15 @@
+{
+  "name": "CartonIQ Universe",
+  "short_name": "CartonIQ",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#030304",
+  "theme_color": "#030304",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

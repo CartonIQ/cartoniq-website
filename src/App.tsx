@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { OpeningSequence } from './components/OpeningSequence';
-import Portfolio from './pages/Portfolio';
+import Universe from './pages/Universe/App.jsx';
 import { SiteHeader } from './components/SiteHeader';
 import { KineticHero } from './components/KineticHero';
 import { CommandTerminal } from './components/CommandTerminal';
@@ -19,7 +19,7 @@ import { useReducedMotion } from './hooks/useReducedMotion';
 
 export default function App() {
   if (window.location.pathname === "/portfolio") {
-    return <Portfolio />;
+    return <Universe />;
   }
 
   const { reducedMotion, toggleMotion } = useReducedMotion();
